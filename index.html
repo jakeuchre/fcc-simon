@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simon Game</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="src/css/animate.css">
+    <link type="text/css" rel="stylesheet" href="src/css/index.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="center">Simon Game</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+      <div class="gameboard">
+        <div class="setting">
+          <h2 class="text">Round <span class="round">0</span></h2>
+        </div>
+        <div class="top-row">
+          <div id="green" class="simbutton" onClick="addToPlayer(this.id)"></div>
+        </div>
+        <div class="middle-row">
+          <div id="yell" class="simbutton" onClick="addToPlayer(this.id)"></div>
+          <div id="red" class="simbutton" onClick="addToPlayer(this.id)"></div>
+        </div>
+        <div class="bottom-row">
+          <div id="blue" class="simbutton" onClick="addToPlayer(this.id)"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-setting ">
+      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Setting</button>
+    </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2 class="modal-title" id="myModalLabel">Settings!</h2>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12 text-center">
+              <h4 class="black">Strict mode?</h4>
+              <p class="btn btn-primary text-center" id="strict" onClick="strict()"> Is currently Off</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+              <h4 class="black">Reset?</h4>
+              <p class="btn btn-warning text-center" data-dismiss="modal" onClick="newGame()"> Reset!</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script src="src/js/jquery-3.2.1.min.js"></script>
+<script src="src/js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script
+  </body>
+</html>
