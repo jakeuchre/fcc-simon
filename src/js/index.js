@@ -74,6 +74,7 @@ function sound(name) {
       simonGame.sound.red.play();
       break;
     case '#blue':
+      simonGame.sound.play();
       break;
   }
 }
